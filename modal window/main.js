@@ -3,14 +3,13 @@ const btn = document.querySelector('#btn');
 const overlay = document.querySelector('#overlay');
 
 
-console.log(overlay);
-console.log(btn);
 
-btn.onclick = function() {
+btn.addEventListener('click', function() {
     overlay.style.display = "block";
 
     const modal = document.createElement('div');
     modal.classList.add('modal-wrapper');
+    modal.style.opacity = '1';
     overlay.appendChild(modal);
 
     const modalContent = document.createElement('div');
@@ -35,5 +34,5 @@ btn.onclick = function() {
     modal.appendChild(modalContent);
     modal.appendChild(closeModal);
     
-}
+});
 
